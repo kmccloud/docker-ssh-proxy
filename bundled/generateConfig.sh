@@ -6,9 +6,7 @@ CONFIG_FILE_PATH=/etc/sshpiper/docker.generated.conf
 
 init() {
   # Remove existing configuration
-  if  [ -d ${CONFIG_DIR} ]; then
-    rm -rf ${CONFIG_DIR}/*
-  fi
+  rm -rf ${CONFIG_DIR}/*/sshpiper_upstream
   # Ensure configuration folder exists
   mkdir -p ${CONFIG_DIR}
 }
